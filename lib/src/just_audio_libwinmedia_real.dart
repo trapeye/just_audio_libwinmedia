@@ -165,7 +165,7 @@ class LibWinMediaAudioPlayer extends AudioPlayerPlatform {
     player.open(medias);
     return Future.microtask(() {
       // Set state to buffering
-      _processingState = ProcessingStateMessage.buffering;
+      _processingState = ProcessingStateMessage.completed;
       broadcastPlaybackEvent();
 
       return LoadResponse(duration: null);
